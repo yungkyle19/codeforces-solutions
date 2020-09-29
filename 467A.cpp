@@ -5,7 +5,8 @@ int main()
 {
   int n;
   cin >> n;
-  int a[1000][2];
+  int counter = 0;
+  int a[101][2];
 
   for (int i = 0; i < n; ++i)
   {
@@ -15,5 +16,13 @@ int main()
     }
   }
 
-  return 0;
+  for (int i = 0; i < n; ++i)
+  {
+    if (a[i][0] != a[i][1] && a[i][1] - a[i][0] >= 2)
+    {
+      counter++;
+    }
+  }
+
+  cout << counter;
 }

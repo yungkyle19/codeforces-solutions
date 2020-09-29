@@ -1,21 +1,23 @@
-#include <bits/stdc++.h>
+#include <Bits/stdc++.h>
 using namespace std;
 
 int main()
 {
-  int n, p, v, t, counter = 0;
+  int n, a[100001], counter = 1;
   cin >> n;
 
   for (int i = 0; i < n; ++i)
   {
-    cin >> p >> v >> t;
+    cin >> a[i];
+  }
 
-    if (p + v + t >= 2)
+  for (int i = 0; i < n - 1; ++i)
+  {
+    if (a[i] != a[i + 1])
     {
       counter++;
     }
   }
 
   cout << counter;
-  return 0;
 }

@@ -3,19 +3,20 @@ using namespace std;
 
 int main()
 {
-  int n, p, v, t, counter = 0;
+  int n, temp;
   cin >> n;
 
   for (int i = 0; i < n; ++i)
   {
-    cin >> p >> v >> t;
+    cin >> temp;
 
-    if (p + v + t >= 2)
+    if (temp == 1)
     {
-      counter++;
+      cout << "HARD";
+      return 0;
     }
   }
 
-  cout << counter;
+  cout << "EASY";
   return 0;
 }
